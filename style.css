@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 /* ===== GLOBAL STYLES ===== */
+html {
+  scroll-behavior: smooth;
+}
 * {
   text-decoration: none;
 }
@@ -164,7 +167,7 @@ navbar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -190,7 +193,7 @@ navbar {
   font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .skill:hover {
@@ -339,7 +342,6 @@ navbar {
   margin: 0 60px 35px;
   padding: 20px;
   position: relative;
-  width: 100%;  
 }
 
 .project-list {
@@ -377,7 +379,6 @@ navbar {
 .project-list .swiper-button-prev {
   display: flex;
 }
-
 
 .swiper-pagination-bullets {
   margin-top: 10px;
@@ -477,4 +478,87 @@ navbar {
 
 .project-list {
   width: 100%;
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience {
+  padding: 5px 2rem;
+  background-color: #3a3f48;
+}
+
+.experience-container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 80px;
+}
+
+.experience-item::before {
+  content: "";
+  position: absolute;
+  left: -1%;
+  top: 22px;
+  width: 2px;
+  height: 80%;
+  background-color: #ababab;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.experience-year {
+  position: absolute;
+  left: -80px;
+  top: 0;
+  width: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ebe8e8;
+  text-align: center;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.experience-year::after {
+  content: "";
+  position: absolute;
+  right: -26px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  background-color: #f0c069;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 1.9px rgba(255, 215, 0, 0.4);
+}
+
+.experience-content {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.job-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ebe8e8;
+  margin: 0 0 4px 0;
+}
+
+.company {
+  font-size: 0.9rem;
+  color: #b8b8b8;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+}
+
+.job-description {
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  line-height: 1.4;
+  margin: 0;
+  text-align: justify;
 }

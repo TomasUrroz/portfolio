@@ -12,9 +12,10 @@
   <body>
     <navbar>
       <ul class="nav-list">
-        <li class="nav-item"><a href="#">About</a></li>
-        <li class="nav-item"><a href="#">Portfolio</a></li>
-        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#skills">Skills</a></li>
+        <li class="nav-item"><a href="#projects">Portfolio</a></li>
+        <li class="nav-item"><a href="#experience">Experience</a></li>
       </ul>
     </navbar>
     <main>
@@ -89,7 +90,7 @@
           </a>
         </div>
       </section>
-      <section aria-label="About" class="about">
+      <section aria-label="About" class="about" id="about">
         <h2>About</h2>
         <p>
           Fullstack Developer with a strong foundation in programming and a
@@ -101,7 +102,7 @@
           excellence.
         </p>
       </section>
-      <section aria-label="Skills" class="skills">
+      <section aria-label="Skills" class="skills" id="skills">
         <h2 class="section-title">My Skills</h2>
         <div class="skills-container">
           <!-- ANGULAR -->
@@ -408,7 +409,7 @@
         </div>
       </section>
 
-      <section aria-label="Projects">
+      <section aria-label="Projects" id="projects">
         <h2 aria-label="Projects" class="section-title">Projects</h2>
         <div class="projects-wrapper">
           <div class="project-list">
@@ -608,8 +609,95 @@
           </div>
         </div>
       </section>
-      <p class="badge mysql">MySQL</p>
-      <p class="badge php">PHP</p>
+
+      <section class="experience" id="experience">
+        <h2 class="section-title" >Experience</h2>
+        <div class="experience-container">
+          <div class="experience-item">
+            <div class="experience-year">2024 2025</div>
+            <div class="experience-content">
+              <h3 class="job-title">Full Stack Developer</h3>
+              <p class="company">Freelance</p>
+              <p class="job-description">
+                Developed a comprehensive ERP system for a fruit distribution
+                company, implementing a full-stack solution with modern
+                technologies. It has sales, inventory, logistics, customer,
+                supplier, employee, financial and analytics management modules.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-year">2025</div>
+            <div class="experience-content">
+              <h3 class="job-title">Angular Developer</h3>
+              <p class="company">
+                Universidad Tecnológica Nacional de Mar del Plata
+              </p>
+              <p class="job-description">
+                Angular-based website with CRUD functionality for lists and
+                users, a database, and integration with the Spotify API. The
+                page recommends songs to users who have created accounts and
+                allows them to save these songs in lists.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-year">2025</div>
+            <div class="experience-content">
+              <h3 class="job-title">System Analyst and Technical support</h3>
+              <p class="company">Grupo Merito – Rio Uruguay Seguros</p>
+              <p class="job-description">
+                My daily duties revolve around troubleshooting both hardware and
+                software issues. I take the lead in exploring and innovating
+                across the entire technological landscape within the company.
+                This involves implementing system changes, researching new
+                programs, and finding solutions to enhance productivity,
+                efficiency, and overall workflow.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-year">2021 2022</div>
+            <div class="experience-content">
+              <h3 class="job-title">PHP Developer</h3>
+              <p class="company">Freelance</p>
+              <p class="job-description">
+                As a freelancer, I undertook a project to create a personalized
+                and custom-designed website based on the client's
+                specifications. The backend was meticulously crafted using PHP
+                and MySQL, equipped with versatile CRUD functionalities for both
+                products and users, among other tailored features as per the
+                client's requests. On the front end, I employed a dynamic
+                combination of HTML, CSS, and Bootstrap to ensure an
+                aesthetically pleasing and responsive user-friendly interface.
+              </p>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-year">2021 2022</div>
+            <div class="experience-content">
+              <h3 class="job-title">Data scientist and technical support</h3>
+              <p class="company">Rossi Rossi - Express</p>
+              <p class="job-description">
+                My daily responsibilities involved crafting and designing
+                reports using MySQL and Microsoft Access, utilizing data
+                extracted from various applications used by employees across the
+                entire company. These reports served as valuable tools for
+                department heads, aiding in informed decision-making. The other
+                facet of my role encompassed providing technical support for the
+                company's hardware, which included computers and networks at
+                large. Additionally, I served as the go-to helpdesk resource for
+                the diverse array of applications employed by over 15 stores and
+                multiple warehouses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
       <script src="script.js"></script>

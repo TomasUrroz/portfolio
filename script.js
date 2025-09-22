@@ -25,16 +25,15 @@ new Swiper(".project-list", {
   slidesPerView: 3,
   loop: true,
 
-   autoplay: {
+  autoplay: {
     delay: 8000,
     disableOnInteraction: false,
-  }, 
+  },
   pagination: {
     el: ".project-pagination",
     clickable: true,
   },
 
-  
   breakpoints: {
     0: {
       slidesPerView: 1,
