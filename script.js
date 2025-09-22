@@ -1,21 +1,11 @@
 new Swiper(".project-images-list", {
-  loop: true,
   spaceBetween: 30,
+  loop: true,
   slidesPerView: 1,
 
   autoplay: {
     delay: 4000,
     disableOnInteraction: false,
-  },
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     0: {
@@ -29,25 +19,22 @@ new Swiper(".project-images-list", {
     },
   },
 });
+
 new Swiper(".project-list", {
-  loop: true,
   spaceBetween: 30,
   slidesPerView: 3,
+  loop: true,
 
-  autoplay: {
-    delay: 4000,
+   autoplay: {
+    delay: 8000,
     disableOnInteraction: false,
-  },
-
+  }, 
   pagination: {
-    el: ".swiper-pagination",
+    el: ".project-pagination",
     clickable: true,
   },
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  
   breakpoints: {
     0: {
       slidesPerView: 1,

@@ -98,7 +98,7 @@ navbar {
   gap: 15px;
   position: fixed;
   right: 30px;
-  bottom: 150px;
+  bottom: 50px;
   z-index: 1000;
 }
 
@@ -142,7 +142,7 @@ navbar {
 .about p::before {
   content: "";
   position: absolute;
-  bottom: 50px;
+  bottom: -120px;
   left: 32px;
   width: 70px;
   height: 3px;
@@ -336,11 +336,14 @@ navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  max-width: 1100px;
   margin: 0 60px 35px;
   padding: 20px;
-  overflow: hidden;
+  position: relative;
+  width: 100%;  
+}
+
+.project-list {
+  position: relative;
 }
 
 .project-list .project-item {
@@ -366,16 +369,21 @@ navbar {
   .swiper-wrapper
   .project-image {
   width: 100%;
-  object-fit: cover;
+  height: 100%;
   border-radius: 10px;
 }
 
-.swiper-navigation-icon {
-  color: rgb(48, 43, 43);
+.project-list .swiper-button-next,
+.project-list .swiper-button-prev {
+  display: flex;
 }
 
-.swiper-pagination {
+
+.swiper-pagination-bullets {
+  margin-top: 10px;
   background-color: transparent;
+  display: flex;
+  justify-content: center;
 }
 
 .swiper-pagination-bullet-active {
@@ -391,6 +399,7 @@ navbar {
 
 .project-list .project-item .project-info .project-title {
   font-size: 1.9rem;
+  text-align: center;
   font-weight: 600;
 }
 
@@ -452,6 +461,8 @@ navbar {
   display: flex;
   flex-wrap: wrap;
   margin: 16px;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-list .project-item .project-info .project-description {
@@ -459,7 +470,7 @@ navbar {
   font-weight: 400;
   margin-bottom: 10px;
   margin-left: 0px;
-  text-align: left;
+  text-align: center;
   width: 100%;
   line-height: 1.6;
 }
