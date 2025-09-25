@@ -46,6 +46,41 @@ navbar {
   color: gold;
 }
 
+.nav-toggles {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  right: 30px;
+}
+
+.nav-toggles svg {
+  width: 40px;
+  height: 40px;
+  margin: 0 2px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.language-toggle {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-toggle:hover svg {
+  transform: scale(1.1);
+  border: 2px solid gold;
+}
+
+.language-toggle.active-language svg {
+  border: 2px solid gold;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+
 /* ===== HERO SECTION ===== */
 .hero {
   display: flex;
