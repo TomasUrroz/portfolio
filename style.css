@@ -37,7 +37,7 @@ navbar {
 }
 
 .nav-item a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #ebe8e8;
   transition: all 0.3s ease;
 }
@@ -527,7 +527,7 @@ navbar {
 .experience-year::after {
   content: "";
   position: absolute;
-  right: -26px;
+  right: -22px;
   top: 2px;
   width: 12px;
   height: 12px;
