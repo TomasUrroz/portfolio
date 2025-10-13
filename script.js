@@ -82,10 +82,10 @@ const translations = {
     // About section
     "about-title": "Acerca de",
     "about-description":
-      "Desarrollador Fullstack con una sólida base en programación y pasión por entregar soluciones personalizadas a los clientes. Competente en Angular y Spring Boot, he navegado con éxito el panorama freelance, perfeccionando mis habilidades en colaboración con clientes y ejecución de proyectos. Con un título de Técnico Universitario en Programación, estoy comprometido a aprovechar mi experiencia técnica para impulsar la innovación y la excelencia.",
+      "Desarrollador Fullstack con una sólida base en programación y pasión por entregar soluciones personalizadas a los clientes. Especializado en Angular y Spring Boot pero con flexibilidad a nuevas y viejas tecnologías dependiendo del projecto, he navegado con éxito el panorama freelance, perfeccionando mis habilidades en colaboración con clientes y ejecución de proyectos. Con un título de Técnico Universitario en Programación, estoy comprometido a aprovechar mi experiencia técnica para impulsar la innovación y la excelencia.",
 
     // Skills section
-    "skills-title": "Mis Habilidades",
+    "skills-title": "Habilidades",
     "angular-experience": "2 años de experiencia.",
     "spring-experience": "1.5 años de experiencia",
     "java-experience": "2 años de experiencia",
@@ -140,7 +140,7 @@ const translations = {
 
 class LanguageManager {
   constructor() {
-    this.currentLanguage = this.getStoredLanguage() || "en";
+    this.currentLanguage = this.getStoredLanguage() || this.detectUserLanguage();
     this.init();
   }
 
@@ -156,6 +156,95 @@ class LanguageManager {
 
   setStoredLanguage(lang) {
     localStorage.setItem("preferred-language", lang);
+  }
+
+  detectUserLanguage() {
+    // Method 1: Check browser language preference (most reliable)
+    const browserLanguage = navigator.language || navigator.userLanguage;
+    
+    if (browserLanguage) {
+      // Extract the language code (e.g., 'es-AR' -> 'es', 'en-US' -> 'en')
+      const langCode = browserLanguage.toLowerCase().split('-')[0];
+      
+      // Check if we support this language
+      if (langCode === 'es' || langCode === 'en') {
+        console.log(`Language detected from browser: ${langCode}`);
+        return langCode;
+      }
+    }
+
+    // Method 2: Fallback to timezone detection
+    try {
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      console.log(`User timezone: ${timezone}`);
+      
+      // Map common Spanish-speaking countries' timezones to Spanish
+      const spanishTimezones = [
+        'America/Argentina/Buenos_Aires',
+        'America/Argentina/Cordoba',
+        'America/Argentina/Mendoza',
+        'America/Mexico_City',
+        'America/Bogota',
+        'America/Lima',
+        'America/Santiago',
+        'Europe/Madrid',
+        'America/Caracas',
+        'America/La_Paz',
+        'America/Asuncion',
+        'America/Montevideo',
+        'America/Guatemala',
+        'America/Tegucigalpa',
+        'America/Managua',
+        'America/Costa_Rica',
+        'America/Panama',
+        'America/Havana',
+        'America/Santo_Domingo',
+        'Atlantic/Canary'
+      ];
+
+      if (spanishTimezones.some(tz => timezone.includes(tz.split('/')[1]) || timezone === tz)) {
+        console.log(`Spanish language detected from timezone: ${timezone}`);
+        return 'es';
+      }
+    } catch (error) {
+      console.warn('Could not detect timezone:', error);
+    }
+
+    // Method 3: Optional IP-based geolocation (async fallback)
+    // This runs asynchronously and updates language if different from default
+    this.detectLanguageByLocation();
+
+    // Default fallback
+    return 'en';
+  }
+
+  async detectLanguageByLocation() {
+    try {
+      // Use a free IP geolocation service
+      const response = await fetch('https://ipapi.co/json/');
+      const data = await response.json();
+      
+      if (data.country_code) {
+        console.log(`User country detected: ${data.country_code}`);
+        
+        // Map Spanish-speaking countries to Spanish
+        const spanishCountries = [
+          'AR', 'MX', 'ES', 'CO', 'PE', 'VE', 'CL', 'EC', 'GT', 'CU',
+          'BO', 'DO', 'HN', 'PY', 'SV', 'NI', 'CR', 'PA', 'UY', 'GQ'
+        ];
+        
+        if (spanishCountries.includes(data.country_code)) {
+          // Only switch if no stored preference and current is default
+          if (!this.getStoredLanguage() && this.currentLanguage === 'en') {
+            console.log(`Switching to Spanish based on country: ${data.country_code}`);
+            this.switchLanguage('es');
+          }
+        }
+      }
+    } catch (error) {
+      // Silently fail - geolocation is optional
+      console.warn('IP-based location detection failed:', error);
+    }
   }
 
   addEventListeners() {

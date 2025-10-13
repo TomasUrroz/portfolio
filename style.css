@@ -103,6 +103,58 @@ navbar {
   flex: 1;
 }
 
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 700px;
+  margin-right: 10%;
+  position: relative;
+}
+
+/* Animated Stars Background */
+.stars-background {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: #0A0A0E;
+}
+
+.stars-svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 100%;
+  width: auto;
+  animation: moveStarsLeft 120s linear infinite;
+  will-change: transform;
+}
+
+.stars-svg-clone {
+  left: 100%;
+}
+
+@keyframes moveStarsLeft {
+  from {
+    transform: translateY(-50%) translateX(0);
+  }
+  to {
+    transform: translateY(-50%) translateX(-100%);
+  }
+}
+
+.hero-image > svg:not(.stars-svg) {
+  position: relative;
+  z-index: 1;
+}
+
 .name-line {
   display: flex;
   align-items: center;
