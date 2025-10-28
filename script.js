@@ -9,12 +9,12 @@ const translations = {
 
     // Hero section
     "hero-im": "I'M",
-    "hero-title": "Full Stack Developer",
+    "hero-title": "Backend Developer",
 
     // About section
     "about-title": "About",
     "about-description":
-      "Fullstack Developer with a strong foundation in programming and a passion for delivering tailored solutions to clients. Proficient in Angular and Spring Boot, I have successfully navigated the freelance landscape, honing my skills in client collaboration and project execution. With a University Technician in Programming degree, I am committed to leveraging my technical expertise to drive innovation and excellence.",
+      "Backend Developer with a strong foundation in programming and a passion for delivering tailored solutions to clients. Proficient in Angular and Spring Boot, I have successfully navigated the freelance landscape, honing my skills in client collaboration and project execution. With a University Technician in Programming degree, I am committed to leveraging my technical expertise to drive innovation and excellence.",
 
     // Skills section
     "skills-title": "My Skills",
@@ -47,10 +47,10 @@ const translations = {
 
     // Experience section
     "experience-title": "Experience",
-    "exp1-title": "Full Stack Developer",
+    "exp1-title": "Backend Developer",
     "exp1-company": "Freelance",
     "exp1-description":
-      "Developed a comprehensive ERP system for a fruit distribution company, implementing a full-stack solution with modern technologies. It has sales, inventory, logistics, customer, supplier, employee, financial and analytics management modules.",
+      "Developed a comprehensive ERP system for a fruit distribution company, implementing a backend solution with modern technologies. It has sales, inventory, logistics, customer, supplier, employee, financial and analytics management modules.",
     "exp2-title": "Angular Developer",
     "exp2-company": "Universidad Tecnológica Nacional de Mar del Plata",
     "exp2-description":
@@ -77,12 +77,12 @@ const translations = {
 
     // Hero section
     "hero-im": "SOY",
-    "hero-title": "Desarrollador Full Stack",
+    "hero-title": "Desarrollador Backend",
 
     // About section
     "about-title": "Acerca de",
     "about-description":
-      "Desarrollador Fullstack con una sólida base en programación y pasión por entregar soluciones personalizadas a los clientes. Especializado en Angular y Spring Boot pero con flexibilidad a nuevas y viejas tecnologías dependiendo del projecto, he navegado con éxito el panorama freelance, perfeccionando mis habilidades en colaboración con clientes y ejecución de proyectos. Con un título de Técnico Universitario en Programación, estoy comprometido a aprovechar mi experiencia técnica para impulsar la innovación y la excelencia.",
+      "Desarrollador Backend con una sólida base en programación y pasión por entregar soluciones personalizadas a los clientes. Especializado en Angular y Spring Boot pero con flexibilidad a nuevas y viejas tecnologías dependiendo del projecto, he navegado con éxito el panorama freelance, perfeccionando mis habilidades en colaboración con clientes y ejecución de proyectos. Con un título de Técnico Universitario en Programación, estoy comprometido a aprovechar mi experiencia técnica para impulsar la innovación y la excelencia.",
 
     // Skills section
     "skills-title": "Habilidades",
