@@ -510,6 +510,15 @@ navbar {
   background: #f7dff5;
 }
 
+.project-list .project-item .project-info .badge.react {
+  color: #b0b224;
+  background: #440d40;
+}
+
+.project-list .project-item .project-info .badge.nestjs {
+  color: #1324b4;
+  background: #2e232d;
+}
 .project-list .project-item .project-info .badge.mysql {
   color: #00758f;
   background: #d0eff4;
