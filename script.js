@@ -14,7 +14,7 @@ const translations = {
     // About section
     "about-title": "About",
     "about-description":
-      "Full-Stack Developer with 3+ years of experience building software used by teams of 50+ people, increasing operational efficiency by up to 90%.",
+      "Backend Developer with 3+ years of experience building software used by teams of 50+ people, increasing operational efficiency by up to 90%.",
 
     // Skills section
     "skills-title": "My Skills",
@@ -87,12 +87,12 @@ const translations = {
 
     // Hero section
     "hero-im": "SOY",
-    "hero-title": "Desarrollador Fullstack",
+    "hero-title": "Desarrollador Backend",
 
     // About section
     "about-title": "Acerca de",
     "about-description":
-      "Desarrollador Fullstack con 3+ años de experiencia creando programas usados por equipos de 50+ personas, mejorando su efficiencia hasta un 90%.",
+      "Desarrollador Backend con 3+ años de experiencia creando programas usados por equipos de 50+ personas, mejorando su efficiencia hasta un 90%.",
 
     // Skills section
     "skills-title": "Habilidades",
