@@ -9,7 +9,7 @@ const translations = {
 
     // Hero section
     "hero-im": "I'M",
-    "hero-title": "Fullstack Developer",
+    "hero-title": "Backend Developer",
 
     // About section
     "about-title": "About",
